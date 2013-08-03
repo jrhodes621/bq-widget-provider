@@ -1,7 +1,7 @@
 .row-fluid
 	%ul{"ng-repeat" => "list in widget.lists"}
 		%li
-			{{list.title}}
+			{{list.name}}
 .row-fluid
 	%div.product-list{"ng-repeat" => "list in widget.lists"}
 		%div.category-name{"ng-repeat" => "category in list.categories"}
