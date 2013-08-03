@@ -24,6 +24,7 @@ WidgetProvider::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  resources :widgets, only: [:show]
 
   # Sample resource route with sub-resources:
   #   resources :products do

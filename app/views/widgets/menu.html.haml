@@ -1,8 +1,26 @@
 .row-fluid
-	%ul
+	%ul{"ng-repeat" => "list in widget.lists"}
 		%li
-			Breakfast
-		%li
-			Lunch
-		%li
-			Dinner
+			{{list.title}}
+.row-fluid
+	%div.product-list{"ng-repeat" => "list in widget.lists"}
+		%div.category-name{"ng-repeat" => "category in list.categories"}
+			{category.name}
+			%div.products
+				%div.product{"ng-repeat" => "product in category.products"}
+					%img{"src"=>"product.image_url"}
+					%h5
+						{{product.title}}
+					%p
+						{{product.description}}
+					%ul
+						%li
+							Like
+						%li
+							Share
+						%li
+							Pin
+					%p
+						$10.40
+
+
