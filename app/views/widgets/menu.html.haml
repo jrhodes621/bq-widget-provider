@@ -5,7 +5,7 @@
 .row-fluid
 	%div.product-list{"ng-repeat" => "list in widget.lists"}
 		%div.category-name{"ng-repeat" => "category in list.categories"}
-			{category.name}
+			{{category.name}}
 			%div.products
 				%div.product{"ng-repeat" => "product in category.products"}
 					%img{"src"=>"product.image_url"}
