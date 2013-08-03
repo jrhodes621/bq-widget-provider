@@ -1,24 +1,27 @@
 .row-fluid
-	%ul.nav.nav-tabs{"ng-repeat" => "list in widget.lists"}
-		%li
-			{{list.name}}
+	%ul.nav.nav-tabs
+		%li{"ng-repeat" => "list in widget.lists"}
+			%a{"href"=>"#"}
+				{{list.name}}
 .row-fluid
 	%div.product-list{"ng-repeat" => "list in widget.lists"}
 		%div.category-name{"ng-repeat" => "category in list.categories"}
 			{{category.name}}
 			%div.products
-				%div.product{"ng-repeat" => "product in category.products"}
-					%img{"src"=>"product.image_url"}
-					%h5
-						{{product.title}}
-					%p
-						{{product.description}}
-					%ul
-						%li
-							Like
-						%li
-							Share
-						%li
-							Pin
-					%p
-						$10.40
+				%div.media.product{"ng-repeat" => "product in category.products"}
+					%a.pull-left
+						%img.media-object{"src"=>"product.image_url"}
+					%div.media-body
+						%h5
+							{{product.title}}
+						%p
+							{{product.description}}
+						%ul
+							%li
+								Like
+							%li
+								Share
+							%li
+								Pin
+						%p
+							$10.40
