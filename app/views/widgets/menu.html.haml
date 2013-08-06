@@ -1,4 +1,4 @@
-%div.reset.widget-panel
+%div.reset.widget
 	.row-fluid
 		%div.row{"ng-repeat" => "location in widget.locations"}
 			%div.col-3
@@ -19,7 +19,7 @@
 	.row-fluid
 		%div.product-list{"ng-repeat" => "list in widget.lists", "ng-show" => "show_list($index)"}
 			%div.category-name{"ng-repeat" => "category in list.categories","ng-click" => "show_category_clicked($index)"}
-				%div.panel
+				%div.widget-panel
 					%div.panel-heading
 						{{category.name}}
 					%ul.list-group{"ng-show" => "show_category($index)"}
